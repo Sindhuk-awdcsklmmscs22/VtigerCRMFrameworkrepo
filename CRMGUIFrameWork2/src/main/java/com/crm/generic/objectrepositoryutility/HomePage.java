@@ -30,6 +30,9 @@ public class HomePage {
 
 	@FindAll({ @FindBy(linkText = "Contacts"), @FindBy(xpath = "//a[contains(text(),'Contacts')]") })
 	private WebElement contactLink;
+	
+	@FindAll({ @FindBy(linkText = "Products"), @FindBy(xpath = "//a[contains(text(),'Products')]") })
+	private WebElement productLink;
 
 	public WebElement getLogOut() {
 		return logOut;
