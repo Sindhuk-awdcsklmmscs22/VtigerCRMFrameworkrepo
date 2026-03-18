@@ -20,7 +20,6 @@ import com.crm.generic.webdriverutility.WebDriverUtility;
 public class BaseClass {
 
 	public WebDriver driver;
-	//public static WebDriver sdriver;
 	FileUtility flib = new FileUtility();
 	WebDriverUtility wlib = new WebDriverUtility();
 	
@@ -47,6 +46,7 @@ public class BaseClass {
 
 	@BeforeMethod
 	public void configBM() throws Throwable {
+		UtilityClassObject.setDriver(driver);
 		driver.manage().window().maximize();
 		wlib.waitForPageLoad(driver);
 		driver.get(flib.getDataFromPropertiesFile("url"));

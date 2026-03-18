@@ -7,6 +7,7 @@ import java.util.Date;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 import org.testng.ISuite;
 import org.testng.ISuiteListener;
 import org.testng.ITestListener;
@@ -55,6 +56,16 @@ public class ListImpClass implements ITestListener, ISuiteListener {
 
 	public void onTestFailure(ITestResult result) {
 		String testName = result.getMethod().getMethodName();
+		
+//		WebDriver driver = UtilityClassObject.getDriver();
+//
+//		if (driver != null) {
+//		    TakesScreenshot ss = (TakesScreenshot) driver;
+//		    String filepath = ss.getScreenshotAs(OutputType.BASE64);
+//		    test.addScreenCaptureFromBase64String(filepath, testName);
+//		} else {
+//		    test.log(Status.WARNING, "Driver is null, screenshot skipped");
+//		}
 		
 		TakesScreenshot ss = (TakesScreenshot)UtilityClassObject.getDriver();
 		String filepath = ss.getScreenshotAs(OutputType.BASE64);
