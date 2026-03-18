@@ -4,13 +4,24 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import com.crm.generic.webdriverutility.WebDriverUtility;
 
 public class ContactInfoPage {
+	
+	WebDriver driver;
+	WebDriverUtility wlib = new WebDriverUtility();
+
+	public ContactInfoPage(WebDriver driver) {
+		PageFactory.initElements(driver, this);
+		this.driver = driver;
+	}
 
 	@FindBy(xpath = "//span[@class='dvHeaderText']")
 	private WebElement headerInfo;
 
-	@FindBy(xpath = "//span[@class='dtlview_Last Name']")
+	@FindBy(xpath = "//span[@id='dtlview_Last Name']")
 	private WebElement lastNameInfo;
 
 	@FindBy(xpath = "//span[@class='dtlview_Support Start Date']")
