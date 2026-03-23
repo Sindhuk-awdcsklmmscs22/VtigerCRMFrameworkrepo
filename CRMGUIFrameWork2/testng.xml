@@ -8,7 +8,7 @@
 	<test thread-count="5" name="Test">
 		<classes>
 			<class name="com.crm.orgtest.CreateOrgTest" />
-			<class name="com.crm.orgtest.CreateContactTest" />
+			<class name="com.crm.createcontacttest.CreateContactTest" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
