@@ -101,8 +101,6 @@ public class CreateOrgTest extends BaseClass {
 		cp.getSaveButton().click();
 		
 		String headerinfo = op.getHeaderInfo().getText();
-		//Intentional failing stt 
-		//Assert.assertFalse(headerinfo.contains(orgName));
 		Assert.assertEquals(true,headerinfo.contains(orgName));
 		String actPhoneNumber = op.getPhoneNumInfo().getText();
 		Assert.assertEquals(actPhoneNumber,phNumber);
