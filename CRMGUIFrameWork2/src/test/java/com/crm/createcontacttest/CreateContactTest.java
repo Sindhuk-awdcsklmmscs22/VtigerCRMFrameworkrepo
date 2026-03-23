@@ -44,4 +44,9 @@ public class CreateContactTest extends BaseClass{
 		Assert.assertEquals(actLastName,lastName);
 		
 	}
+	
+	public void modifyContactTest() throws Throwable {
+	
+		System.out.println("execute modifyContactTest");
+	}
 }
